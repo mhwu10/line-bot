@@ -1,0 +1,3 @@
+line-bot-sdk
+# give a certain version of line-bot-sdk: line-bot-sdk==2.2.1
+gunicorn
