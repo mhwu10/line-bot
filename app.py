@@ -12,8 +12,7 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi(
-    'D2XPmvG53D0kT5SkHSOB1gPt3YnwfkOpPmQ89FjPKVfTMs2e492gltQwYDZ2qpk1kp69DI8pEE5Xcg4gcKew8/Q58C7wADemQHK0/EJTwGJjUDhcYlK1FCjqagV4uH85hIpeZ7lr8AGwN7JxzKJqHAdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('D2XPmvG53D0kT5SkHSOB1gPt3YnwfkOpPmQ89FjPKVfTMs2e492gltQwYDZ2qpk1kp69DI8pEE5Xcg4gcKew8/Q58C7wADemQHK0/EJTwGJjUDhcYlK1FCjqagV4uH85hIpeZ7lr8AGwN7JxzKJqHAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('9a49e02d06091be47fd7f63c59f50071')
 
 # If someone goes to address:www.line-bot/callback, this function will run.
