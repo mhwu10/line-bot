@@ -41,10 +41,14 @@ def handle_message(event):
     msg = event.message.text
     r = "I don't understand"
 
-    if msg == in ["hi", "Hi"]:
+    if msg in ["hi", "Hi"]:
         r = "hi"
     elif msg == "Have you had meal?":
         r = "Not yet"
+    elif msg == "Who are you?":
+        r = "I am a robot"
+    elif "book" in msg:
+        r = "Do you want to book?"
 
     line_bot_api.reply_message(
         event.reply_token,
