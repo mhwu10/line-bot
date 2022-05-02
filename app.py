@@ -12,7 +12,8 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('D2XPmvG53D0kT5SkHSOB1gPt3YnwfkOpPmQ89FjPKVfTMs2e492gltQwYDZ2qpk1kp69DI8pEE5Xcg4gcKew8/Q58C7wADemQHK0/EJTwGJjUDhcYlK1FCjqagV4uH85hIpeZ7lr8AGwN7JxzKJqHAdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi(
+    'D2XPmvG53D0kT5SkHSOB1gPt3YnwfkOpPmQ89FjPKVfTMs2e492gltQwYDZ2qpk1kp69DI8pEE5Xcg4gcKew8/Q58C7wADemQHK0/EJTwGJjUDhcYlK1FCjqagV4uH85hIpeZ7lr8AGwN7JxzKJqHAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('9a49e02d06091be47fd7f63c59f50071')
 
 
@@ -37,6 +38,14 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    msg = event.message.text
+    r = "I don't understand"
+
+    if msg == "hi":
+        r = "hi"
+    elif msg == "Have you had meal?":
+        r = "Not yet"
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text='eat?'))
